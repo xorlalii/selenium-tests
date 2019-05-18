@@ -7,6 +7,11 @@ verify_ssl = true
 
 [packages]
 selenium = "*"
+htmltestrunner = "*"
+html-testrunner = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
