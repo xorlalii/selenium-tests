@@ -2,8 +2,8 @@ import unittest
 from selenium import webdriver
 
 
-class DeezerBaseTestCase(unittest.TestCase):
-    base_url = "https://www.deezer.com/en"
+class BaseTestCase(unittest.TestCase):
+    base_url = None
     driver = None
 
     @classmethod
@@ -29,3 +29,15 @@ class DeezerBaseTestCase(unittest.TestCase):
 
     def visit(self, path):
         self.driver.get(self.get_url(path))
+
+
+class DeezerBaseTestCase(BaseTestCase):
+    base_url = "https://www.deezer.com/en"
+
+
+class MystoreBaseTestCase(BaseTestCase):
+    base_url = "http://automationpractice.com"
+
+
+class EbayBaseTestCase(BaseTestCase):
+    base_url = "https://www.ebay.co.uk"
